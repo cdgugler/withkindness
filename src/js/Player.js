@@ -4,13 +4,13 @@
  */
 
 WithKindness.Sprite.Player = function Player(game, x, y) {
-    Phaser.Sprite.call(this, game, 10, 10, null);
+    Phaser.Sprite.call(this, game, x, y, null);
     game.add.existing(this);
 
-    this.legLeft = game.add.sprite(x, y + 23, 'sprites', 'FootStill-l');
-    this.legRight = game.add.sprite(x, y + 23, 'sprites', 'FootStill-r');
-    this.bodyLeft = game.add.sprite(x + 2, y, 'sprites', 'BodyStill-l');
-    this.bodyRight = game.add.sprite(x + 2, y, 'sprites', 'BodyStill-r');
+    this.legLeft = game.add.sprite(0, 0 + 20, 'sprites', 'FootStill-l');
+    this.legRight = game.add.sprite(0, 0 + 20, 'sprites', 'FootStill-r');
+    this.bodyLeft = game.add.sprite(0 + 2, 0, 'sprites', 'BodyStill-l');
+    this.bodyRight = game.add.sprite(0 + 2, 0, 'sprites', 'BodyStill-r');
 
     this.addChild(this.legLeft);
     this.addChild(this.legRight);
@@ -38,15 +38,13 @@ WithKindness.Sprite.Player = function Player(game, x, y) {
 
     this.game.physics.enable(this, Phaser.Physics.ARCADE);
     this.body.collideWorldBounds = true;
-    this.body.setSize(32, 64, 0, 0);
+    this.body.setSize(28, 50, 3, 5);
 
     this.facing = 'right';
     this.anchor.setTo(.5,.5); // so we can flip it
     this.speed = 2;
     this.friction = 3;
-    this.jumping = false;
-    this.jumpTimer = 0;
-    this.doubleJump = false;
+    this.bodyMove = 0;
 };
 
 WithKindness.Sprite.Player.prototype = Object.create(Phaser.Sprite.prototype);
@@ -64,10 +62,10 @@ WithKindness.Sprite.Player.prototype.initBodyParts = function() {
 
 WithKindness.Sprite.Player.prototype.moveLeft = function() {
     if (this.game.player.facing != 'left') {
-        this.game.player.animations.play('running');
         this.game.player.facing = 'left';
         this.game.player.scale.x = -1;
     }
+    this.game.player.bodyMovin();
     this.game.player.legLeft.animations.play('walking');
     this.game.player.legRight.animations.play('walking');
     this.game.player.body.x -= this.game.player.speed;
@@ -75,19 +73,33 @@ WithKindness.Sprite.Player.prototype.moveLeft = function() {
 
 WithKindness.Sprite.Player.prototype.moveRight = function() {
     if (this.game.player.facing != 'right') {
-        this.game.player.animations.play('running');
         this.game.player.facing = 'right';
         this.game.player.scale.x = 1;
     }
+    this.game.player.bodyMovin();
     this.game.player.legLeft.animations.play('walking');
     this.game.player.legRight.animations.play('walking');
     this.game.player.body.x += this.game.player.speed;
+}
+
+WithKindness.Sprite.Player.prototype.bodyMovin = function() {
+    this.bodyMove++;
+    if (!this.bodyMoved && this.bodyMove % 10 == 0) {
+        this.bodyMoved = true;
+        this.game.player.bodyLeft.body.y +=2;
+        this.game.player.bodyRight.body.y +=2;
+    } else if (this.bodyMoved && this.bodyMove % 10 == 0) {
+        this.bodyMoved = false;
+        this.game.player.bodyLeft.body.y -=2;
+        this.game.player.bodyRight.body.y -=2;
+    }
 }
 
 WithKindness.Sprite.Player.prototype.moveUp = function() {
     if (this.game.player.facing != 'up') {
         this.game.player.facing = 'up';
     }
+    this.game.player.bodyMovin();
     this.game.player.body.y -= this.game.player.speed;
     this.game.player.legLeft.animations.play('walking');
     this.game.player.legRight.animations.play('walking');
@@ -97,6 +109,7 @@ WithKindness.Sprite.Player.prototype.moveDown = function() {
     if (this.game.player.facing != 'down') {
         this.game.player.facing = 'down';
     }
+    this.game.player.bodyMovin();
     this.game.player.animations.play('running');
     this.game.player.body.y += this.game.player.speed;
     this.game.player.legLeft.animations.play('walking');

@@ -22,12 +22,14 @@ WithKindness.Game.prototype = {
 	create: function () {
         var gravityY = 1200;
         var bgColor = '#333';
-        var playerStartX = 0;
-        var playerStartY = 0;
+        var playerStartX = 310;
+        var playerStartY = 220;
 
         this.game.physics.enable(this, Phaser.Physics.ARCADE);
 
         this.game.stage.backgroundColor = bgColor;
+		this.spaceBackground = this.add.sprite(0, 0, 'preloaderBackground');
+		this.groundBackground = this.add.sprite(0, this.game.stage.height - 180, 'groundBG');
 
         this.game.player = new WithKindness.Sprite.Player(this.game, playerStartX, playerStartY);
 

@@ -17,6 +17,7 @@ WithKindness.Preloader.prototype = {
 		//	as the files below are loaded in.
 		this.load.setPreloadSprite(this.preloadBar);
 
+        this.load.image('groundBG', 'images/ground.png');
 		this.load.atlasJSONHash('sprites', 'build/images/sprites.png', 'build/images/sprites.json');
 	},
 
