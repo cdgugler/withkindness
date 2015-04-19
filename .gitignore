@@ -1,0 +1,6 @@
+/phaser/*
+!/phaser/build
+!/phaser/build/*
+Session.vim
+node_modules
+src/js/lib

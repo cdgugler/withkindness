@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>With Kindness</title>
+    <script type="text/javascript" charset="utf-8">
+        var gameWidth = 640,
+            gameHeight = 360;
+    </script>
+	<script src="src/js/lib/phaser/build/phaser.js"></script>
+	<script src="src/js/Boot.js"></script>
+	<script src="src/js/Preloader.js"></script>
+	<script src="src/js/MainMenu.js"></script>
+	<script src="src/js/Game.js"></script>
+	<script src="src/js/Player.js"></script>
+	<script src="src/js/Input.js"></script>
+</head>
+<body>
+
+<div id="gameContainer"></div>
+
+<script type="text/javascript">
+window.onload = function() {
+	var game = new Phaser.Game(gameWidth, gameHeight, Phaser.AUTO, 'gameContainer');
+
+	game.state.add('Boot', WithKindness.Boot);
+	game.state.add('Preloader', WithKindness.Preloader);
+	game.state.add('MainMenu', WithKindness.MainMenu);
+	game.state.add('Game', WithKindness.Game);
+
+	game.state.start('Boot');
+
+};
+</script>
+
+</body>
+</html>
