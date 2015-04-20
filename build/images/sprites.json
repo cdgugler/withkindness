@@ -1,0 +1,834 @@
+{
+    "frames": {
+        "AlienHugDeath1": {
+            "frame": {
+                "x": 32,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 42,
+                "h": 64
+            }
+        },
+        "AlienHugDeath2": {
+            "frame": {
+                "x": 154,
+                "y": 64,
+                "w": 42,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 42,
+                "h": 64
+            }
+        },
+        "AlienHugDeath3": {
+            "frame": {
+                "x": 0,
+                "y": 64,
+                "w": 42,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 42,
+                "h": 64
+            }
+        },
+        "AlienHugDeath4": {
+            "frame": {
+                "x": 74,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 42,
+                "h": 64
+            }
+        },
+        "AlienHugDeath5": {
+            "frame": {
+                "x": 42,
+                "y": 64,
+                "w": 42,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 42,
+                "h": 64
+            }
+        },
+        "AlienHugDeath6": {
+            "frame": {
+                "x": 84,
+                "y": 64,
+                "w": 42,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 42,
+                "h": 64
+            }
+        },
+        "AlienSpit": {
+            "frame": {
+                "x": 196,
+                "y": 110,
+                "w": 16,
+                "h": 16
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 16,
+                "h": 16
+            },
+            "sourceSize": {
+                "w": 16,
+                "h": 16
+            }
+        },
+        "AlienSpitting": {
+            "frame": {
+                "x": 0,
+                "y": 128,
+                "w": 28,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 28,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 28,
+                "h": 64
+            }
+        },
+        "AlienStand": {
+            "frame": {
+                "x": 28,
+                "y": 128,
+                "w": 28,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 28,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 28,
+                "h": 64
+            }
+        },
+        "AlienWalk1": {
+            "frame": {
+                "x": 56,
+                "y": 128,
+                "w": 28,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 28,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 28,
+                "h": 64
+            }
+        },
+        "AlienWalk2": {
+            "frame": {
+                "x": 126,
+                "y": 64,
+                "w": 28,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 28,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 28,
+                "h": 64
+            }
+        },
+        "BodyStill-l": {
+            "frame": {
+                "x": 84,
+                "y": 128,
+                "w": 32,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 64
+            }
+        },
+        "BodyStill-r": {
+            "frame": {
+                "x": 158,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 64
+            }
+        },
+        "FootStill-l": {
+            "frame": {
+                "x": 96,
+                "y": 215,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "FootStill-r": {
+            "frame": {
+                "x": 196,
+                "y": 64,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Hug1-l": {
+            "frame": {
+                "x": 190,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 64
+            }
+        },
+        "Hug1-r": {
+            "frame": {
+                "x": 0,
+                "y": 192,
+                "w": 32,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 64
+            }
+        },
+        "Hug2-l": {
+            "frame": {
+                "x": 32,
+                "y": 192,
+                "w": 32,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 64
+            }
+        },
+        "Hug2-r": {
+            "frame": {
+                "x": 148,
+                "y": 128,
+                "w": 32,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 64
+            }
+        },
+        "Hug3-l": {
+            "frame": {
+                "x": 116,
+                "y": 128,
+                "w": 32,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 64
+            }
+        },
+        "Hug3-r": {
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 64
+            }
+        },
+        "HugAlien": {
+            "frame": {
+                "x": 116,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 42,
+                "h": 64
+            },
+            "sourceSize": {
+                "w": 42,
+                "h": 64
+            }
+        },
+        "Walk1-l": {
+            "frame": {
+                "x": 96,
+                "y": 192,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk1-r": {
+            "frame": {
+                "x": 180,
+                "y": 128,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk2-l": {
+            "frame": {
+                "x": 222,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk2-r": {
+            "frame": {
+                "x": 222,
+                "y": 23,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk3-l": {
+            "frame": {
+                "x": 64,
+                "y": 215,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk3-r": {
+            "frame": {
+                "x": 128,
+                "y": 192,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk4-l": {
+            "frame": {
+                "x": 228,
+                "y": 46,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk4-r": {
+            "frame": {
+                "x": 180,
+                "y": 151,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk5-l": {
+            "frame": {
+                "x": 64,
+                "y": 192,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk5-r": {
+            "frame": {
+                "x": 228,
+                "y": 69,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk6-l": {
+            "frame": {
+                "x": 212,
+                "y": 110,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk6-r": {
+            "frame": {
+                "x": 64,
+                "y": 238,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk7-l": {
+            "frame": {
+                "x": 160,
+                "y": 192,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk7-r": {
+            "frame": {
+                "x": 128,
+                "y": 215,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk8-l": {
+            "frame": {
+                "x": 212,
+                "y": 133,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "Walk8-r": {
+            "frame": {
+                "x": 196,
+                "y": 87,
+                "w": 32,
+                "h": 23
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 32,
+                "h": 23
+            },
+            "sourceSize": {
+                "w": 32,
+                "h": 23
+            }
+        },
+        "alienhealth": {
+            "frame": {
+                "x": 228,
+                "y": 92,
+                "w": 50,
+                "h": 15
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 50,
+                "h": 15
+            },
+            "sourceSize": {
+                "w": 50,
+                "h": 15
+            }
+        },
+        "playerhealth": {
+            "frame": {
+                "x": 180,
+                "y": 174,
+                "w": 100,
+                "h": 15
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 100,
+                "h": 15
+            },
+            "sourceSize": {
+                "w": 100,
+                "h": 15
+            }
+        },
+        "title": {
+            "frame": {
+                "x": 254,
+                "y": 0,
+                "w": 185,
+                "h": 20
+            },
+            "rotated": false,
+            "trimmed": false,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 185,
+                "h": 20
+            },
+            "sourceSize": {
+                "w": 185,
+                "h": 20
+            }
+        }
+    },
+    "meta": {
+        "app": "https://github.com/Ensighten/spritesmith",
+        "image": "sprites.png",
+        "format": "RGBA8888",
+        "size": {
+            "w": 439,
+            "h": 261
+        },
+        "scale": 1
+    }
+}

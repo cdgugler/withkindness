@@ -1,0 +1,28 @@
+{
+  "name": "WithKindness",
+  "version": "0.0.0",
+  "description": "Ludum Dare 32",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "~3.8.11",
+    "gulp.spritesmith": "~2.5.1",
+    "spritesmith-texturepacker": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-connect": "^2.2.0",
+    "gulp-imagemin": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cdgugler/ludumdare32.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdgugler/ludumdare32/issues"
+  },
+  "homepage": "https://github.com/cdgugler/ludumdare32"
+}
