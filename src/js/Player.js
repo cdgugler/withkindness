@@ -10,7 +10,11 @@ WithKindness.Sprite.Player = function Player(game, x, y) {
     this.legLeft = game.add.sprite(0, 0 + 20, 'sprites', 'FootStill-l');
     this.legRight = game.add.sprite(0, 0 + 20, 'sprites', 'FootStill-r');
     this.bodyLeft = game.add.sprite(0 + 2, 0, 'sprites', 'BodyStill-l');
-    this.bodyRight = game.add.sprite(0 + 2, 0, 'sprites', 'BodyStill-r');
+    this.bodyLeft.yAdjustment = 10 - 5;
+    this.bodyRight = game.add.sprite(0 + 2, 32, 'sprites', 'BodyStill-r');
+    this.bodyRight.yAdjustment = 12;
+    this.legLeft.yAdjustment = 0;
+    this.legRight.yAdjustment = 0;
 
     this.addChild(this.legLeft);
     this.addChild(this.legRight);
@@ -23,14 +27,15 @@ WithKindness.Sprite.Player = function Player(game, x, y) {
     this.legLeft.animations.add('standing', ['FootStill-l'], false, false);
     this.legRight.animations.add('standing', ['FootStill-r'], false, false);
     this.bodyLeft.animations.add('hug', ['Hug1-l', 'Hug2-l', 'Hug3-l'], 10, false);
-    this.bodyRight.animations.add('hug', ['Hug1-r', 'Hug2-r', 'Hug3-r'], 10, false);
+    this.bodyLeft.animations.add('hugalien', ['HugAlien'], 10, false);
+    this.hugAnimation = this.bodyRight.animations.add('hug', ['Hug1-r', 'Hug2-r', 'Hug3-r'], 10, false);
     this.bodyLeft.animations.add('unhug', ['Hug2-l', 'Hug1-l', 'BodyStill-l'], false, false);
     this.bodyRight.animations.add('unhug', ['Hug2-r', 'Hug1-r', 'BodyStill-r'], false, false);
     this.bodyLeft.animations.add('standing', ['BodyStill-l'], false, false);
     this.bodyRight.animations.add('standing', ['BodyStill-r'], false, false);
 
     this.bodyLeft.anchor.setTo(.5, .5);
-    this.bodyRight.anchor.setTo(.5, .5);
+    this.bodyRight.anchor.setTo(.5, 1);
     this.legLeft.anchor.setTo(.5, .5);
     this.legRight.anchor.setTo(.5, .5);
 
@@ -45,6 +50,14 @@ WithKindness.Sprite.Player = function Player(game, x, y) {
     this.speed = 2;
     this.friction = 3;
     this.bodyMove = 0;
+    this.health = 100;
+    this.alienHealth = 50;
+    this.score = 0;
+    this.game.allSprites.sprites.push(this.bodyRight);
+    this.game.allSprites.sprites.push(this.bodyLeft);
+    this.game.allSprites.sprites.push(this.legRight);
+    this.game.allSprites.sprites.push(this.legLeft);
+    this.game.allSprites.sortSprites();
 };
 
 WithKindness.Sprite.Player.prototype = Object.create(Phaser.Sprite.prototype);
@@ -127,9 +140,67 @@ WithKindness.Sprite.Player.prototype.standStill = function() {
 WithKindness.Sprite.Player.prototype.hug = function() {
     if (!this.game.player.isHugging) {
         this.game.player.isHugging = true;
-        this.game.player.hugDelay = 25;
+        this.game.player.hugDelay = 45;
         this.game.player.bodyLeft.animations.play('hug');
         this.game.player.bodyRight.animations.play('hug');
+    }
+
+}
+
+WithKindness.Sprite.Player.prototype.embraceHarder = function() {
+    if (this.embracePower < 25) {
+        this.embracePower = 25;
+        this.alienHealth -= 10;
+        this.alienHealthBar.width = this.alienHealth;
+        if (this.alienHealth < 0) {
+            this.alienHealthBar.kill();
+            this.embraced = false;
+            this.game.player.bodyLeft.animations.play('unhug');
+            this.game.player.bodyRight.animations.play('unhug');
+            var deadAlien = this.game.add.sprite(this.bodyLeft.body.x, this.bodyLeft.body.y, 'sprites', 'AlienHugDeath1');
+            deadAlien.animations.add('alienDying', ['AlienHugDeath1','AlienHugDeath2','AlienHugDeath3','AlienHugDeath4','AlienHugDeath5','AlienHugDeath6'], 10, false);
+            deadAlien.animations.play('alienDying');
+        }
+    }
+    this.embracePower--;
+}
+
+WithKindness.Sprite.Player.prototype.alienCollision = function(player, alien) {
+    if (Math.abs(player.body.y - alien.body.y) < 10) {
+        if (player.isHugging) {
+            player.isHugging = false;
+            player.embraced = true;
+            player.alienHealth = 100;
+            player.alienHealthBar = player.game.add.sprite(200, 10, 'sprites', 'alienhealth');
+            player.alienHealthBar.width = player.alienHealth;
+            player.embracePower = 25;
+            alien.kill();
+            player.score++;
+            player.bodyLeft.animations.play('hugalien');
+        } else {
+        }
+    }
+}
+
+WithKindness.Sprite.Player.prototype.hit = function(player, spit) {
+    spit.kill();
+    player.health += -10;
+    if (player.health < 0) {
+        player.kill();
+        player.game.playerHealthBar.kill();
+        player.game.alientimer.stop();
+        player.game.aliens.forEach(function(alien) {
+            alien.kill();
+        });
+        player.game.gameOver = true;
+
+        var text = player.game.add.text(player.game.world.centerX, player.game.world.centerY, "Game Over.\n You made " + player.score + " new friends! \n Press Spacebar to return to main menu.", {
+            font: "32px Arial",
+            fill: "#ffffff",
+            align: "center"
+        });
+
+        text.anchor.setTo(0.5, 0.5);
     }
 }
 
@@ -139,8 +210,10 @@ WithKindness.Sprite.Player.prototype.update = function() {
         this.game.player.hugDelay--; 
         if (this.game.player.hugDelay < 0) {
             this.game.player.isHugging = false;
-            this.game.player.bodyLeft.animations.play('unhug');
-            this.game.player.bodyRight.animations.play('unhug');
+            if (!this.embraced) {
+                this.game.player.bodyLeft.animations.play('unhug');
+                this.game.player.bodyRight.animations.play('unhug');
+            }
         }
     }
 }

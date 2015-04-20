@@ -29,13 +29,9 @@ WithKindness.Util.handleInput = function (game, state) {
         game.player.standStill();
     }
 
-    if (game.input.keyboard.isDown(Phaser.Keyboard.F)) {
-        game.player.hug();
-    }
-
     if (game.gameOver == true) {
         if (game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
-            state.quitGame();
+		    game.state.start('MainMenu');
         }
     }
 }
